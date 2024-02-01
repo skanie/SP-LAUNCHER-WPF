@@ -1,0 +1,28 @@
+﻿<Window x:Class="SP_LAUNCHER_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SP_LAUNCHER_WPF"
+        mc:Ignorable="d"
+        Title="SKANIE PROJECT - INSTALLATION" Height="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#0F1923">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="800" Fill="#FFEF4958" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+        <Label x:Name="_1STEPDOWNLOAD" Content="ПЕРВЫЙ ЭТАП УСТАНОВКИ" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="32" Foreground="#FF0F1923" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="740,25,0,0" VerticalAlignment="Top" Width="30" Source="/View/Res/Icon/icon_close.png" MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="690,30,0,0" VerticalAlignment="Top" Width="30" Source="/View/Res/Icon/icon _chevron bottom_.png" MouseLeftButtonUp="Image_MouseLeftButtonUp2" Cursor="Hand"/>
+        <Rectangle HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="5" Fill="#FFEF4958" Margin="0,80,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="5" Fill="#FFEF4958" Margin="795,80,0,0"/>
+        <Rectangle HorizontalAlignment="Center" Height="5" VerticalAlignment="Top" Width="790" Fill="#FFEF4958" Margin="0,795,0,0"/>
+        <Label x:Name="WELCOME" Content="Добро пожаловать!" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="40" Foreground="#FFEF4958" Margin="163,346,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="DOWNLOADBUTTON" Content="УСТАНОВИТЬ" HorizontalAlignment="Left" Margin="200,510,0,0" VerticalAlignment="Top" Width="400" Height="74" FontSize="32" Foreground="#FF0F1923" Background="#FFEF4958" BorderBrush="{x:Null}" Cursor="Hand" Click="DOWNLOADBUTTON_Click" Style="{StaticResource Hatten}"/>
+        <Label x:Name="DOWNLOADLAUNCHERTEXT" Content="Если вы уверены, что хотите установить лаунчер,&#xA;                   нажмите на кнопку &quot;Установить&quot;." HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="20" Foreground="#FFEF4958" Margin="99,397,0,0" Height="56" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="606"/>
+        <Label x:Name="DOWNLOAD_START" Content="Установка началась! " HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="40" Foreground="#FFEF4958" Margin="133,370,0,0" Visibility="Hidden"/>
+        <Label x:Name="WAITFORDOWNLOAD" Content=" Ожидайте завершения установки,&#xD;&#xA;это может занять некоторое время." HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="20" Foreground="#FFEF4958" Margin="187,421,0,0" Height="64" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+        <ProgressBar x:Name="PROGRESSBAR" HorizontalAlignment="Left" Height="25" Margin="100,485,0,0" VerticalAlignment="Top" Width="600" BorderBrush="#FFEF4958" Foreground="#FFEF4958" Background="#FF1D2732" Visibility="Hidden"/>
+        <Label x:Name="_2STEPDOWNLOAD" Content="ВТОРОЙ ЭТАП УСТАНОВКИ" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="32" Foreground="#FF0F1923" Visibility="Hidden" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+        <Rectangle x:Name="choisediskbackground" Height="25" Width="600" Fill="#FF1D2732" Margin="0,465,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Stroke="#FFEF4958"/>
+        <Button x:Name="CHOISEBUTTON" Content="ВЫБРАТЬ" HorizontalAlignment="Left" Margin="550,465,0,0" VerticalAlignment="Top" Width="150" Height="25" FontSize="16" Foreground="#FF0F1923" Background="#FFEF4958" BorderBrush="{x:Null}" Style="{StaticResource Hatten}" Cursor="Hand" Click="Button_Click_Folder" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="selectedFolderTextBox" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="16" Foreground="#FFEF4958" Margin="99,463,0,0" VerticalContentAlignment="Center" Width="454" Height="27"/>
+    </Grid>
+</Window>

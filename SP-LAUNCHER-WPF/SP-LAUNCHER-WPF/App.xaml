@@ -1,0 +1,14 @@
+﻿<Application x:Class="SP_LAUNCHER_WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SP_LAUNCHER_WPF"
+             StartupUri="View\MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="Hatten">
+            <Setter Property="TextElement.FontFamily" Value="/View/Res/Fonts/#Intro" />
+        </Style>
+        <Style x:Key="HattenButton" TargetType="Button">
+            <Setter Property="FontFamily" Value="/View/Res/Fonts/#Intro" />
+        </Style>
+    </Application.Resources>
+</Application>
