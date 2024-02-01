@@ -22,7 +22,7 @@ Built-in support chat (In development)
 
 Technologies used:</br>
 С#</br>
-WPF
+WPF .Net
 
 Authors:</br>
 Ilya Zhabenko ([GitHub](https://github.com/skanie))
