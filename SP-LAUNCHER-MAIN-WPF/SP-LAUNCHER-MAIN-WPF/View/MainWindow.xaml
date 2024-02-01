@@ -1,0 +1,55 @@
+﻿<Window x:Class="SP_LAUNCHER_MAIN_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SP_LAUNCHER_MAIN_WPF"
+        mc:Ignorable="d"
+        Title="SKANIE PROJECT - LAUNCHER" Height="800" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#0F1923">
+    <Grid>
+        <Grid x:Name="LauncherIntarface" HorizontalAlignment="Center" Height="800" VerticalAlignment="Center">
+            <Rectangle x:Name="PANELNAVIGATION" HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="1280" Fill="#FFEF4958" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+            <Label x:Name="SKANIEPROJECTTEXT" Content="SKANIE PROJECT" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="32" Foreground="#FF0F1923" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+            <Rectangle x:Name="LAUNCHERLINELEFT" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="5" Fill="#FFEF4958" Margin="0,80,0,0"/>
+            <Rectangle x:Name="LAUNCHERLINERIGHT" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="5" Fill="#FFEF4958" Margin="1275,80,0,0"/>
+            <Rectangle x:Name="LAUNCHERLINEDOWN" HorizontalAlignment="Center" Height="5" VerticalAlignment="Top" Width="1270" Fill="#FFEF4958" Margin="0,795,0,0"/>
+        </Grid>
+        <Label x:Name="WELCOME" Content="Выберите игру для установки!" Style="{StaticResource Hatten}" FontSize="32" Foreground="#FFEF4958" Margin="0,416,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1190"/>
+        <Button x:Name="DOWNLOADBUTTON" Content="УСТАНОВИТЬ" HorizontalAlignment="Left" Margin="845,691,0,0" VerticalAlignment="Top" Width="400" Height="74" FontSize="32" Foreground="#FF0F1923" Background="#FFEF4958" BorderBrush="{x:Null}" Cursor="Hand" Click="DOWNLOADBUTTON_Click" Visibility="Hidden" Style="{StaticResource Hatten}"/>
+        <Grid x:Name="ChoiseFolderGame" HorizontalAlignment="Left" Height="27" Margin="34,738,0,0" VerticalAlignment="Top" Width="801" Visibility="Hidden">
+            <Rectangle x:Name="choisediskbackground" Height="25" Width="800" Fill="#FF1D2732" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="#FFEF4958"/>
+            <Button x:Name="CHOISEBUTTON" Content="ВЫБРАТЬ" HorizontalAlignment="Left" Margin="651,0,0,0" VerticalAlignment="Center" Width="150" Height="25" FontSize="16" Foreground="#FF0F1923" Background="#FFEF4958" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_Click_Folder" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Hatten}"/>
+            <Label x:Name="selectedFolderTextBox" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource Hatten}" FontSize="16" Foreground="#FFEF4958" VerticalContentAlignment="Center" Width="655" Height="27" Margin="-1,-2,0,0"/>
+        </Grid>
+        <ProgressBar x:Name="PROGRESSBAR" HorizontalAlignment="Left" Height="25" Margin="34,738,0,0" VerticalAlignment="Top" Width="800" BorderBrush="#FFEF4958" Foreground="#FFEF4958" Background="#FF1D2732" Visibility="Hidden" Value="8"/>
+        <Grid x:Name="NavigationMenuUp" HorizontalAlignment="Left" Height="30" Margin="1120,25,0,0" VerticalAlignment="Top" Width="130">
+            <Image x:Name="CloseButton" HorizontalAlignment="Left" Height="30" Margin="100,0,0,0" VerticalAlignment="Center" Width="30" Source="/View/Res/Icon/icon_close.png" MouseLeftButtonUp="CloseButtonclick" Cursor="Hand"/>
+            <Image x:Name="TurnUpButton" HorizontalAlignment="Center" Height="21" VerticalAlignment="Center" Width="30" Source="/View/Res/Icon/icon _chevron bottom_.png" MouseLeftButtonUp="TurnUpButtonclick" Cursor="Hand"/>
+            <Image x:Name="SettingsButton" HorizontalAlignment="Left" Height="30" VerticalAlignment="Center" Width="30" Source="/View/Res/Icon/icon _cog_.png" MouseLeftButtonUp="SettingButtonclick" Cursor="Hand"/>
+        </Grid>
+        <Grid x:Name="GridNewsAndSocNetwork" HorizontalAlignment="Left" Height="266" Margin="945,409,0,0" VerticalAlignment="Top">
+            <Rectangle x:Name="newspanel" HorizontalAlignment="Left" Height="147" VerticalAlignment="Top" Width="300" Fill="#FFEF4958" Margin="0,119,0,0"/>
+            <Label x:Name="NEWSNEWS" Content="НОВОСТИ" Style="{StaticResource Hatten}" FontSize="16" Foreground="#FFEF4958" Margin="28,82,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="Hand"/>
+            <Label x:Name="UPDATENEWS" Content="ОБНОВЛЕНИЯ" Style="{StaticResource Hatten}" FontSize="16" Foreground="#FFEF4958" Margin="154,81,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="Hand"/>
+            <Label x:Name="SOCNETWNAME" Content="СОЦ. СЕТИ" Style="{StaticResource Hatten}" FontSize="16" Foreground="#FFEF4958" Margin="105,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Rectangle x:Name="SOCNETWORK1" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Fill="#FFEF4958" Margin="75,31,0,0" Cursor="Hand"/>
+            <Rectangle x:Name="SOCNETWORK2" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Fill="#FFEF4958" Margin="135,31,0,0" Cursor="Hand"/>
+            <Rectangle x:Name="SOCNETWORK3" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Fill="#FFEF4958" Margin="195,31,0,0" Cursor="Hand"/>
+            <Rectangle x:Name="NEWSSELECTEDLINE" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="83" Fill="#FFEF4958" Margin="33,106,0,0"/>
+            <Rectangle x:Name="UPDATESELECTEDLINE" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="117" Fill="#FFEF4958" Margin="159,106,0,0" Visibility="Hidden"/>
+        </Grid>
+        <Image x:Name="MenuButton" HorizontalAlignment="Left" Height="30" Margin="35,110,0,0" VerticalAlignment="Top" Width="35" Source="/View/Res/Icon/icon _menu_.png" MouseLeftButtonUp="MenuButtonclick" Cursor="Hand"/>
+        <Grid x:Name="MenuGridandStackgames" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="34,164,0,0" Visibility="Hidden">
+            <Rectangle x:Name="MenuGrid" HorizontalAlignment="Center" Height="600" VerticalAlignment="Center" Width="400" Fill="#FFEF4958"/>
+            <StackPanel x:Name="StackGames" HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Margin="12,15,0,0">
+                <Button x:Name="INCARNATIONGAMEBUTTON" Content="INCARNATION" Width="375" Height="76" FontSize="32" Foreground="#FFEF4958" Background="#FF0F1923" BorderBrush="{x:Null}" Cursor="Hand" Click="IncarnationInstallclick" Margin="0,0,0,15" Style="{StaticResource Hatten}"/>
+                <Button x:Name="INCARNATIONGAMEBUTTON_Копировать" Content="ENIGMA" Width="375" Height="76" FontSize="32" Foreground="#FFEF4958" Background="#FF0F1923" BorderBrush="{x:Null}" Cursor="Hand" Click="EnigmaInstallclick" Margin="0,0,0,15" Style="{StaticResource Hatten}"/>
+                <Button x:Name="INCARNATIONGAMEBUTTON_Копировать1" Content="INCARNATION" Width="375" Height="76" FontSize="32" Foreground="#FFEF4958" Background="#FF0F1923" BorderBrush="{x:Null}" Cursor="Hand" Click="IncarnationInstallclick" Margin="0,0,0,15" Style="{StaticResource Hatten}" Visibility="Hidden"/>
+                <Button x:Name="INCARNATIONGAMEBUTTON_Копировать2" Content="INCARNATION" Width="375" Height="76" FontSize="32" Foreground="#FFEF4958" Background="#FF0F1923" BorderBrush="{x:Null}" Cursor="Hand" Click="IncarnationInstallclick" Margin="0,0,0,15" Visibility="Hidden" Style="{StaticResource Hatten}"/>
+                <Button x:Name="INCARNATIONGAMEBUTTON_Копировать3" Content="INCARNATION" Width="375" Height="76" FontSize="32" Foreground="#FFEF4958" Background="#FF0F1923" BorderBrush="{x:Null}" Cursor="Hand" Click="IncarnationInstallclick" Margin="0,0,0,15" Visibility="Hidden" Style="{StaticResource Hatten}"/>
+                <Button x:Name="INCARNATIONGAMEBUTTON_Копировать4" Content="INCARNATION" Width="375" Height="76" FontSize="32" Foreground="#FFEF4958" Background="#FF0F1923" BorderBrush="{x:Null}" Cursor="Hand" Click="IncarnationInstallclick" Visibility="Hidden" Style="{StaticResource Hatten}"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock x:Name="usernameTextBlock" FontSize="32" Foreground="#FF0F1923" FlowDirection="RightToLeft" Width="500" Height="35" HorizontalAlignment="Left" Style="{StaticResource Hatten}" VerticalAlignment="Top" Margin="600,21,0,0" MouseDown="Window_MouseDown" MouseMove="Window_MouseMove" MouseUp="Window_MouseUp" ><Run Text="nickname"/><LineBreak/><Run/></TextBlock>
+    </Grid>
+</Window>
