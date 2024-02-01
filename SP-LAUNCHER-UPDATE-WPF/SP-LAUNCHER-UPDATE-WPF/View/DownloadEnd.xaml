@@ -1,0 +1,18 @@
+﻿<Window x:Class="SP_LAUNCHER_UPDATE_WPF.View.DownloadEnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SP_LAUNCHER_UPDATE_WPF.View"
+        mc:Ignorable="d"
+        Title="SKANIE PROJECT - COMPLETE" Height="400" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#0F1923">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="600" Fill="#FFEF4958" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Source="/View/Res/Icon/icon_close.png" MouseLeftButtonUp="Image_MouseLeftButtonUp" Cursor="Hand" Margin="540,25,0,0"/>
+        <Label x:Name="DOWNLOADLAUNCHERTEXT" Content="ОБНОВЛЕНИЕ ПРОШЛО УСПЕШНО!" Style="{StaticResource Hatten}" FontSize="20" Foreground="#FFEF4958" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="104,206,104,140"/>
+        <Label x:Name="_1STEPDOWNLOAD" Content="Уведомление" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Style="{StaticResource Hatten}" FontSize="32" Foreground="#FF0F1923" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove" MouseDown="Window_MouseDown"/>
+        <Rectangle HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="5" Fill="#FFEF4958" Margin="0,80,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="5" Fill="#FFEF4958" Margin="595,80,0,0"/>
+        <Rectangle HorizontalAlignment="Center" Height="5" VerticalAlignment="Top" Width="590" Fill="#FFEF4958" Margin="0,395,0,0"/>
+    </Grid>
+</Window>
